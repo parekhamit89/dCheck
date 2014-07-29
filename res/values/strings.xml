@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">dChek</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="save">Save</string>
+    <string name="food_name">Food Name</string>
+    <string name="serving_size">Serving Size</string>
+    <string name="food_calories">Calories</string>
+    <string name="bg_level_title">Bg Level</string>
+    <string name="dr_visit_title">Doctor Visit</string>
+    <string name="cl_counter_title">Calorie Counter</string>
+    <string name="today_subtitle">Today</string>
+    <string name="last_week_subtitle">Last week</string>
+    <string name="last_visit">Last Visit</string>
+    <string name="next_visit">Next Visit</string>
+    <string name="time_period">Select Time</string>
+    <string name="select_quantity">Select quantity</string>
+    <string name="hospital_name">Hospital Name</string>
+    <string name="dr_last_name">Doctor Last Name</string>
+    <string name="dr_first_name">Doctor First Name</string>
+    <string name="dr_ph_no">Doctor Phone Number</string>
+    <string name="email">Email Address</string>
+    <string name="bg_unit">BG (mg/dL)</string>
+    <string name="bg_level_hint">Please enter Glucose Level</string>
+    <string name="first_name">Please enter First Name</string>
+    <string name="last_name">Please enter Last Name</string>
+    <string name="phone_no">Phone Number</string>
+    <string name="birth_date">Birth Date</string>
+    <string name="enter_diabetic_type">Please enter type of Diabetics</string>
+    <string name="height">Height</string>
+    <string name="height_unit">cms</string>
+    <string name="weight">Weight</string>
+    <string name="weight_unit">Kg</string>
+    <string name="type_of_diabeties">Diabetic Type</string>
+
+    
+    <!-- validation strings -->
+    <string name="enter_phone_no">Please Enter Phone Number</string>
+    <string name="enter_email">Please Enter Email Address</string>
+    <string name="enter_note">Any note?</string>
+    <string name="add_food">Add Food</string>
+    
+    <string-array name="bg_food_times">
+        <item>Out of Bed</item>
+        <item>Before Breakfast</item>
+        <item>After Breakfast</item>
+        <item>Before Lunch</item>
+        <item>After Lunch</item>
+        <item>Before Dinner</item>
+        <item>After Dinner</item>
+        <item>Before Bed</item>
+        <item>After Bed</item>
+        <item>Before Activity</item>
+        <item>After Activity</item>
+        <item>Other</item>
+    </string-array>
+    
+    <string-array name="cl_intake_time">
+        <item>Breakfast</item>
+        <item>Morning snack</item>
+        <item>Lunch</item>
+        <item>Afternoon Snack</item>
+        <item>Dinner</item>
+        <item>Anytime</item>
+    </string-array>
+    <string-array name="serving_unit">
+        <item>Number</item>
+        <item>can</item>
+        <item>cup</item>
+        <item>gram</item>
+        <item>1 can or 8 fl oz</item>
+        <item>1 cup or 8 fl oz</item>
+    </string-array>
+    <string-array name="diabetic_type">
+        <item>Type 1</item>
+        <item>Type 2</item>
+        <item>Gestational</item>
+        <item>Prediabetes</item>
+        <item>Other</item>
+    </string-array>
+
+</resources>

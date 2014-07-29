@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+     >
+
+    <com.sanotech.dchek.FooterView
+        android:id="@+id/footer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/footer"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rl_user_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true" >
+
+                <ImageView
+                    android:id="@+id/img_user_info"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/circle"
+                    android:scaleType="centerInside" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/img_user_info"
+                    android:gravity="center"
+                    android:weightSum="1.0" >
+
+                    <Button
+                        android:id="@+id/btn_capture"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/date_field"
+                        android:gravity="center"
+                        android:text="Capture" />
+
+                    <Button
+                        android:id="@+id/btn_browse_gallery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/date_field"
+                        android:gravity="center"
+                        android:text="Browse" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/edt_user_fname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_field"
+                android:gravity="center_vertical"
+                android:hint="@string/first_name"
+                android:padding="5dp" 
+                android:imeOptions="actionNext"
+                android:singleLine="true"/>
+
+            <EditText
+                android:id="@+id/edt_user_lname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_field"
+                android:gravity="center_vertical"
+                android:hint="@string/last_name"
+                android:padding="5dp" 
+                android:imeOptions="actionNext"
+                android:singleLine="true"/>
+
+            <EditText
+                android:id="@+id/edt_user_phone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_field"
+                android:gravity="center_vertical"
+                android:hint="@string/phone_no"
+                android:inputType="phone"
+                android:padding="5dp" 
+                android:imeOptions="actionNext"
+                android:singleLine="true"/>
+
+            <EditText
+                android:id="@+id/edt_user_email_add"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_field"
+                android:gravity="center_vertical"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:padding="5dp" 
+                android:imeOptions="actionNext"
+                android:singleLine="true"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_bd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:gravity="left"
+                    android:padding="5dp"
+                    android:text="@string/birth_date"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/rl_bd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1.0" >
+
+                    <TextView
+                        android:id="@+id/tv_bd_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:background="@drawable/date_field"
+                        android:gravity="center"
+                        android:hint="@string/birth_date"
+                        android:textSize="16sp" 
+                        android:layout_marginRight="5dp"
+                android:singleLine="true"/>
+
+                    <ImageView
+                        android:id="@+id/img_cal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_weight="0.2"
+                        android:src="@android:drawable/ic_menu_my_calendar" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_hieght"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:gravity="left"
+                    android:padding="5dp"
+                    android:text="@string/height"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/rl_hieght"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1.0" >
+
+                    <EditText
+                        android:id="@+id/edt_height"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:background="@drawable/date_field"
+                        android:gravity="center"
+                        android:hint="@string/height"
+                        android:inputType="number" 
+                        android:imeOptions="actionNext"
+                android:singleLine="true"/>
+
+                    <TextView
+                        android:id="@+id/tv_height_unit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="0.2"
+                        android:text="@string/height_unit"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_weight"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:gravity="left"
+                    android:padding="5dp"
+                    android:text="@string/weight"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/rl_weight"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1.0" >
+
+                    <EditText
+                        android:id="@+id/edt_weight"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:background="@drawable/date_field"
+                        android:gravity="center"
+                        android:hint="@string/weight"
+                        android:inputType="number"
+                        android:singleLine="true" 
+                        android:imeOptions="actionDone"
+                />
+
+                    <TextView
+                        android:id="@+id/tv_weight_unit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="0.2"
+                        android:gravity="center"
+                        android:text="@string/weight_unit"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:orientation="horizontal" 
+                android:weightSum="1.0">
+
+                <TextView
+                    android:id="@+id/tv_diabities_type"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:gravity="left"
+                    android:padding="5dp"
+                    android:text="@string/type_of_diabeties"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                android:id="@+id/sp_type_diabities"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_field"
+                android:entries="@array/diabetic_type"
+                android:prompt="@string/enter_diabetic_type" 
+                 android:layout_weight="0.7"/>
+
+                   
+                  
+            </LinearLayout>
+           
+
+            <Button
+                android:id="@+id/btn_save_user_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button"
+                android:text="@string/save" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

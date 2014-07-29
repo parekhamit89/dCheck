@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    
+    <item android:id="@+id/title"
+        android:title="Food List"
+        android:visible="true"/>
+  <item android:id="@+id/action_add"
+          android:titleCondensed="@string/add_food"
+          android:showAsAction="ifRoom|withText"
+          
+          />
+</menu>

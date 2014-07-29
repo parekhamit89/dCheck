@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+     <com.sanotech.dchek.FooterView
+        android:id="@+id/footer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom" />
+    
+    
+    <RelativeLayout
+        android:id="@+id/ll_date_time"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+         android:background="@drawable/blue_bar"
+         android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/img_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/left_arrow" />
+
+        <TextView
+            android:id="@+id/tv_day_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="12/12/2014 Thursday" />
+
+        <ImageView
+            android:id="@+id/img_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/right_arrow" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/ll_date_time" 
+        android:layout_above="@+id/footer">
+
+        <ListView
+            android:id="@+id/ls_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+             />
+
+        <ListView
+            android:id="@+id/ls_items"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="#f9961a"
+        android:dividerHeight="0.5dp" />
+    </LinearLayout>
+
+</RelativeLayout>

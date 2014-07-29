@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp" >
+
+    <LinearLayout
+        android:id="@+id/ll_cstm_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1.0" >
+
+        <TextView
+            android:id="@+id/tv_cstm_food_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:text="@string/food_name" />
+
+        <EditText
+            android:id="@+id/edt_cstm_food_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:hint="@string/food_name" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_cstm_serving"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_cstm_name"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="1.0" >
+
+        <TextView
+            android:id="@+id/tv_cstm_servin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.6"
+            android:text="@string/serving_size" />
+
+        <Spinner
+            android:id="@+id/sp_cstm_quantity"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:entries="@array/serving_unit"
+            android:prompt="@string/select_quantity" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_cstm_calori"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_cstm_serving"
+        android:orientation="horizontal"
+        android:weightSum="1.0" >
+
+        <TextView
+            android:id="@+id/tv_cstm_calori"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:text="@string/food_calories" />
+
+        <EditText
+            android:id="@+id/edt_cstm_calori"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:inputType="number"
+            android:hint="@string/food_calories" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_cstm_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_cstm_calori"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="@string/save"
+        android:background="@drawable/button" />
+
+</RelativeLayout>

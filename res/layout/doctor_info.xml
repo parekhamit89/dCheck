@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp" >
+
+    <com.sanotech.dchek.FooterView
+        android:id="@+id/footer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/footer"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/edt_dr_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/text_field"
+                android:gravity="center_vertical"
+                android:hint="@string/dr_first_name"
+                android:paddingLeft="5dp"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/edt_dr_last_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/text_field"
+                android:gravity="center_vertical"
+                android:hint="@string/dr_last_name"
+                android:paddingLeft="5dp"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/edt_hospital_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/text_field"
+                android:gravity="center_vertical"
+                android:hint="@string/hospital_name"
+                android:paddingLeft="5dp"
+                android:singleLine="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:weightSum="1.0" >
+
+                <TextView
+                    android:id="@+id/tv_dr_date_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:text="@string/next_visit"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1.0" >
+
+                    <TextView
+                        android:id="@+id/tv_next_visit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:background="@drawable/date_field"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:hint="Date"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/img_dr_cal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:src="@android:drawable/ic_menu_my_calendar" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edt_dr_phone_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/text_field"
+                android:gravity="center_vertical"
+                android:hint="@string/dr_ph_no"
+                android:inputType="phone"
+                android:paddingLeft="5dp"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/edt_dr_email_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/text_field"
+                android:gravity="center_vertical"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="5dp"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/edt_dr_medicine"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/text_field"
+                android:gravity="top|left"
+                android:hint="Medicines"
+                android:maxLines="5"
+                android:paddingLeft="5dp" />
+
+            <Button
+                android:id="@+id/btn_dr_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button"
+                android:gravity="center"
+                android:text="@string/save"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

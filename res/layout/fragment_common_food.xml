@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp" >
+
+    <EditText
+        android:id="@+id/edt_search_food"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:imeOptions="actionSearch"
+        android:singleLine="true" />
+
+    <ListView
+        android:id="@+id/ls_common_food"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/edt_search_food"
+        android:layout_marginTop="5dp"
+        android:divider="#f9961a"
+        android:dividerHeight="0.5dp">
+    </ListView>
+
+</RelativeLayout>

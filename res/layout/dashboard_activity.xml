@@ -1,0 +1,404 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:background="#ffffff" 
+    android:id="@+id/main_relative">
+
+  <!--   <RelativeLayout
+        android:id="@+id/rl_icons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" 
+        >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1.0" 
+            android:background="@drawable/bottom_bar"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_weight="0.25"
+                android:src="@drawable/home_blue" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_weight="0.25"
+                android:src="@drawable/data_gray" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_weight="0.25"
+                android:src="@drawable/info_gray"  />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_weight="0.25"
+                android:src="@drawable/friend_gray" />
+        </LinearLayout>
+    </RelativeLayout> -->
+	
+	<com.sanotech.dchek.FooterView
+	    android:id="@+id/rl_icons"
+	    android:layout_height="wrap_content"
+	    android:layout_width="fill_parent"
+	    android:layout_alignParentBottom="true"/>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="5dp" 
+        android:layout_above="@id/rl_icons">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/rl_icons" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_user_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true" >
+
+                    <ImageView
+                        android:id="@+id/img_user"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:background="@drawable/circle" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/img_user"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/tv_user_name"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:text="Hello Jhone"
+                            android:textStyle="bold" 
+                            />
+
+                        <ImageView
+                            android:id="@+id/img_bg_indicator"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/tv_user_name"
+                            android:layout_centerInParent="true"
+                            android:background="#ff00" />
+
+                        <TextView
+                            android:id="@+id/tv_updated_date"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/img_bg_indicator"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:text="12/12/12" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_bg_title"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/bg_level_title"
+                        android:textSize="22sp" 
+                        android:textColor="#ffffff"
+                         android:textStyle="bold"
+                        android:background="@drawable/blue_bar"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="1.0" >
+
+                        <TextView
+                            android:id="@+id/tv_today_bg_subtitle"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/today_subtitle"
+                            android:textSize="16sp"
+                            android:background="@drawable/date_field"
+                            android:textStyle="bold"
+                            android:textColor="#3e8c00" />
+
+                        <TextView
+                            android:id="@+id/tv_week_bg_subtitle"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/last_week_subtitle"
+                            android:textSize="16sp" 
+                            android:background="@drawable/date_field"
+                            android:textStyle="bold"
+                            android:textColor="#3e8c00" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/darker_gray"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:id="@+id/ll_bg_values"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="#ffffff"
+                            android:orientation="horizontal"
+                            android:weightSum="1.0" 
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp">
+
+                            <TextView
+                                android:id="@+id/tv_today_bg_value"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="180 ml/dL"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_week_bg_value"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="Logg"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_dr_title"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/dr_visit_title"
+                         android:textSize="22sp" 
+                        android:textColor="#ffffff"
+                         android:textStyle="bold"
+                        android:background="@drawable/blue_bar"/>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="1.0" >
+
+                        <TextView
+                            android:id="@+id/tv_next_visit_subtitle"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/next_visit"
+                            android:textSize="16sp" 
+                            android:background="@drawable/date_field"
+                            android:textStyle="bold"
+                            android:textColor="#3e8c00" />
+
+                        <TextView
+                            android:id="@+id/tv_last_visit_subtitle"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/last_visit"
+                            android:textSize="16sp" 
+                            android:background="@drawable/date_field"
+                            android:textStyle="bold"
+                            android:textColor="#3e8c00" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/darker_gray"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:id="@+id/ll_dr_values"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="#ffffff"
+                            android:orientation="horizontal"
+                            android:weightSum="1.0" >
+
+                            <TextView
+                                android:id="@+id/tv_next_dr_value"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="12/12/2014 12:20am"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_last_dr_value"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="10/12/2014 12:20am"
+                                android:textSize="22sp"
+                                android:textStyle="bold" 
+                                android:paddingTop="5dp"
+                            android:paddingBottom="5dp"/>
+                            
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_cl_title"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/cl_counter_title"
+                        android:textSize="22sp" 
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:background="@drawable/blue_bar"/>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="1.0" >
+
+                        <TextView
+                            android:id="@+id/tv_today_cl_subtitle"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:padding="5dp"
+                           android:text="@string/today_subtitle"
+                            android:textSize="16sp" 
+                            android:background="@drawable/white_bar"
+                            android:textStyle="bold"
+                            android:textColor="#3e8c00" />
+ <!-- android:text="@string/today_subtitle" 
+ android:text="@string/last_week_subtitle"-->
+                        <TextView
+                            android:id="@+id/tv_week_cl_subtitle"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/last_week_subtitle"
+                            android:textSize="16sp" 
+                           android:background="@drawable/white_bar" 
+                           android:textStyle="bold"
+                            android:textColor="#3e8c00" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/darker_gray"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:id="@+id/ll_cl_values"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="#ffffff"
+                            android:orientation="horizontal"
+                            android:weightSum="1.0"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp" >
+
+                            <TextView
+                                android:id="@+id/tv_today_cl_value"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="1800 cal"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_week_cl_value"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="1200 cal"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>
